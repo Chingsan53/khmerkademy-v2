@@ -23,10 +23,10 @@ const MatchingPair = () => {
   ];
 
   const initialPairs = [
-    { left: "Apple", right: "Red" },
-    { left: "Banana", right: "Yellow" },
-    { left: "Grass", right: "Green" },
-    { left: "Sky", right: "Blue" },
+    { left: "Hello", right: "សួស្តី / Sous sdei" },
+    { left: "Good bye!", right: "លាសិនហើយ / Lea sen hery" },
+    { left: "Good evening", right: "សាយន្ត័សួស្តី / Sa yourn Sous sdei" },
+    { left: "Tomato", right: "ផ្លែប៉េងប៉ោះ" },
   ];
 
   const [pairs, setPairs] = useState([]);

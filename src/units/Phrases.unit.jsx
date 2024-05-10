@@ -56,7 +56,7 @@ const Phrases = ({
                 <button className="button-8">Back to Lessons</button>{" "}
               </Link> */}
               <button className="button-8" onClick={handleNext}>
-                Next lesson
+                Back to Lesson
               </button>
             </>
           ) : (

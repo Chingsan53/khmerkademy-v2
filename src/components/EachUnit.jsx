@@ -40,22 +40,6 @@ const EachUnit = () => {
             </div>
           </div>
         </div>
-        <div class="progress-circle">
-          <div class="circle">
-            <div class="mask full">
-              <div class="fill"></div>
-            </div>
-            <div class="mask half">
-              <div class="fill"></div>
-            </div>
-            <div
-              className="inside-circle"
-              onClick={() => navigate("/unit/conversation-1")}
-            >
-              Conversation 1
-            </div>
-          </div>
-        </div>
 
         <div class="progress-circle">
           <div class="circle">
@@ -70,6 +54,22 @@ const EachUnit = () => {
               onClick={() => navigate("/unit/basic-phrase-1")}
             >
               Basic Phrase 1
+            </div>
+          </div>
+        </div>
+        <div class="progress-circle">
+          <div class="circle">
+            <div class="mask full">
+              <div class="fill"></div>
+            </div>
+            <div class="mask half">
+              <div class="fill"></div>
+            </div>
+            <div
+              className="inside-circle"
+              onClick={() => navigate("/unit/conversation-1")}
+            >
+              Conversation 1
             </div>
           </div>
         </div>

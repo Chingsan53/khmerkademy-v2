@@ -14,7 +14,7 @@ const OneConversation = ({ user, lessonId }) => {
   }, [user, lessonId]);
 
   const navigate = useNavigate();
-  const handleNext = () => {
+  const handleNextProgress = () => {
     if (user) {
       // Check if user exists before using it
       saveLessonProgress(user.uid, lessonId, progress);
@@ -23,6 +23,12 @@ const OneConversation = ({ user, lessonId }) => {
       console.error("User is not logged in");
       // Optionally, redirect to login page or show an error message
     }
+  };
+
+  const Navigate = useNavigate();
+
+  const handleNext = () => {
+    Navigate("/lesson");
   };
   return (
     <div className="">

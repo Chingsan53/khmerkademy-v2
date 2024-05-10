@@ -8,12 +8,12 @@ const Grammar = () => {
         </div>
         <div className="grammar-pics">
           <img
-            src="https://placehold.co/600x400.png"
+            src="../img/book-grammar.png"
             alt="first-pic"
             className="grammar-pic"
           />
           <img
-            src="https://placehold.co/600x400.png"
+            src="../img/veggies-grammar.png"
             alt="second-pic"
             className="grammar-pic"
           />

@@ -46,7 +46,7 @@ const DailyPhrase = () => {
   return (
     <>
       <header className="header">
-        <h1>New Phrase for {dayName}</h1>
+        <h1>New Phrase/Word for {dayName}</h1>
       </header>
 
       <main className="main">

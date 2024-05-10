@@ -118,17 +118,11 @@ const Quiz = () => {
 
   if (currentQuestionIndex === -1) {
     return (
-      <div className="congratulations">
+      <div className="congratulations-1">
         Congrats{" "}
         <Link to="/lessons" className="each-unit">
           <button className="button-8">Back to Lessons</button>
         </Link>
-        <button
-          className="button-8"
-          onClick={() => navigate("/unit/basic-phrase-2")}
-        >
-          Next Lesson
-        </button>
       </div>
     );
   }

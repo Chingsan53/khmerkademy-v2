@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const OnePhrases = ({ printTest, incrementScore, score, setScore }) => {
   const navigate = useNavigate();
   const handleNext = () => {
-    navigate("/unit/conversation-1");
+    navigate("/lesson");
   };
 
   return (
