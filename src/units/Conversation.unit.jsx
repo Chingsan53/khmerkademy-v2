@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Conversation.unit.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Conversation = ({ data, handleNext, user }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -12,6 +12,8 @@ const Conversation = ({ data, handleNext, user }) => {
       setCurrentIndex(currentIndex + 1);
     }
   };
+
+  const Navigate = useNavigate();
 
   const renderMessage = (studentData, className, index) => (
     <div className={className}>
@@ -63,7 +65,7 @@ const Conversation = ({ data, handleNext, user }) => {
               Learn again
             </button>{" "}
             <button className="button-8" onClick={handleNext}>
-              Next lesson
+              Back to lesson
             </button>
           </>
         ) : (

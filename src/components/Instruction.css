@@ -21,8 +21,9 @@
 }
 
 .instruction-picture img {
-    width: 300px;
+    width: 150px;
 }
+
 
 .instruction-button {
     display: flex;

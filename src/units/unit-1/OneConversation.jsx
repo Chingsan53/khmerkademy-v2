@@ -18,7 +18,7 @@ const OneConversation = ({ user, lessonId }) => {
     if (user) {
       // Check if user exists before using it
       saveLessonProgress(user.uid, lessonId, progress);
-      navigate("/exercise/fill-the-blank");
+      navigate("/unit-1");
     } else {
       console.error("User is not logged in");
       // Optionally, redirect to login page or show an error message

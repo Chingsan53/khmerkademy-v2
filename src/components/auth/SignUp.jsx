@@ -94,7 +94,7 @@ const SignUp = () => {
       const userData = await getUserData(user.uid); // Fetch user-specific data
 
       console.log(userData);
-      navigate("/unit/basic-phrase-1");
+      navigate("/instruction");
     } catch (error) {
       console.error("Error with Google Sign In", error);
       alert("Failed to sign in with Google. Please try again.");
