@@ -39,7 +39,7 @@ const Conversation = ({ data, handleNext, user }) => {
               renderMessage(data.student_a, "convo-left", currentIndex)}
           </div>
           <img
-            src="../section-img/white-khmer-girl.png"
+            src="../section-img/green-khmer-girl.png"
             alt="left-person"
             className="convo-img"
           />
@@ -50,7 +50,7 @@ const Conversation = ({ data, handleNext, user }) => {
               renderMessage(data.student_b, "convo-right", currentIndex)}
           </div>
           <img
-            src="../section-img/white-khmer-boy.png"
+            src="../section-img/green-khmer-boy.png"
             alt="left-person"
             className="convo-img"
           />
