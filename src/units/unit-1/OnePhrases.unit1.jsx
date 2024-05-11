@@ -1,12 +1,13 @@
 import Phrases from "../Phrases.unit";
 import data from "./onePhrases.json";
+import useSound from "use-sound";
 
 import { useNavigate } from "react-router-dom";
 
 const OnePhrases = ({ printTest, incrementScore, score, setScore }) => {
   const navigate = useNavigate();
   const handleNext = () => {
-    navigate("/lesson");
+    navigate("/unit-1");
   };
 
   return (

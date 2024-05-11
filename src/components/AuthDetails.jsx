@@ -57,22 +57,11 @@ const AuthDetails = () => {
           )}
         </div>
         <div className="right-profile">
-          <h3>Progress</h3>
-          <p>
-            Unit 1: <span>90%</span>
-          </p>
-          <p>
-            Unit 2: <span>10%</span>
-          </p>
-          <p>
-            Unit 3: <span>0%</span>
-          </p>
-
           <div className="profile-detail">
             <h3>Profile detail</h3>
             <p>
               {/* <strong>A user since: </strong> {authUser.metadata.creationTime} */}
-              <strong>User since: </strong> April 21, 2024
+              <strong>User since: </strong>
             </p>
           </div>
         </div>

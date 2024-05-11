@@ -1,65 +1,66 @@
 .main-grammar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .grammar-title {
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
 }
 
 .first-grammar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .grammar-pics {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .grammar-pic {
-    width: 400px;
+  width: 400px;
 }
 
 .grammar-rules-exc {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 .grammar-rules {
-    border-radius: 10px;
-    background-color: #8DECB4;
-    padding: 10px;
+  border-radius: 10px;
+  background-color: #8decb4;
+  padding: 10px;
 }
 
 .grammar-examples {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* border: 1px solid black; */
-    background-color: antiquewhite;
-    padding: 10px;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid black; */
+  background-color: antiquewhite;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .grammar-prompt {
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
 }

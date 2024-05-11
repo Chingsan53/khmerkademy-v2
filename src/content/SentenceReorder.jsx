@@ -16,6 +16,7 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import "./SentenceReorder.css";
+import { useNavigate } from "react-router-dom";
 
 const DraggableWord = ({ id }) => {
   const { attributes, listeners, setNodeRef, transform, transition } =
@@ -118,6 +119,7 @@ const SentenceReorder = () => {
   const [correctOrder, setCorrectOrder] = useState(
     reorderedWords[currentIndex].correctOrder
   );
+  const [isComplete, setIsComplete] = useState(false);
 
   const sensors = useSensors(useSensor(PointerSensor));
 
@@ -133,10 +135,14 @@ const SentenceReorder = () => {
   };
 
   const handleNext = () => {
-    const nextIndex = (currentIndex + 1) % reorderedWords.length;
-    setCurrentIndex(nextIndex);
-    setWords(reorderedWords[nextIndex].initialWords);
-    setCorrectOrder(reorderedWords[nextIndex].correctOrder);
+    const nextIndex = currentIndex + 1;
+    if (nextIndex < reorderedWords.length) {
+      setCurrentIndex(nextIndex);
+      setWords(reorderedWords[nextIndex].initialWords);
+      setCorrectOrder(reorderedWords[nextIndex].correctOrder);
+    } else {
+      setIsComplete(true);
+    }
   };
   const checkOrder = () => {
     if (JSON.stringify(words) === JSON.stringify(correctOrder)) {
@@ -145,6 +151,18 @@ const SentenceReorder = () => {
       alert("Incorrect, try again!");
     }
   };
+
+  const Navigate = useNavigate();
+
+  if (isComplete) {
+    return (
+      <div className="congratulations">
+        <button onClick={() => Navigate("/unit-1")} className="button-8">
+          Back to Lessons
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div

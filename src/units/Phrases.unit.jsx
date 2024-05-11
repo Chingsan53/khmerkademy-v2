@@ -1,6 +1,7 @@
 import "./Phrases.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useSound from "use-sound";
 const Phrases = ({
   data,
   printTest,
@@ -19,6 +20,10 @@ const Phrases = ({
 
   const currentPhrase = data.greeting[currentIndex];
 
+  const [playSound] = useSound(
+    `../audio/phrases/phrase1-${currentIndex + 1}.mp3`
+  );
+
   return (
     <div className="phrases-main">
       <div className="phrases-title">
@@ -28,7 +33,9 @@ const Phrases = ({
         <div key={currentPhrase.id} className="each-phrase">
           <div className="main-item">
             <span>{currentPhrase.word}</span>
-            <button className="button-8">Hear it</button>
+            <button className="button-8" onClick={playSound}>
+              Hear it
+            </button>
           </div>
           <div className="phrase-item">
             {" "}
@@ -56,7 +63,7 @@ const Phrases = ({
                 <button className="button-8">Back to Lessons</button>{" "}
               </Link> */}
               <button className="button-8" onClick={handleNext}>
-                Back to Lesson
+                Back to Unit 1
               </button>
             </>
           ) : (

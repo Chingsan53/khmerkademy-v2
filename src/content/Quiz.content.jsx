@@ -34,13 +34,16 @@ const blankWords = [
     translation: "តើអ្នកមានអាយុអ្វី?",
     phonetic: "Ter neak mean ______ avey?",
     options: [
-      { text: "តើអ្នកមានអាយុអ្វី?", phonetic: "Ter nak man ah yuk avey" },
+      { text: "តើអ្នកមានអាយុអ្វី?", phonetic: "Ter neak man ah yuk avey" },
       {
         text: "តើអ្នកមានបងប្អូនអ្វី?",
         phonetic: "Ter nak man bong paoun avey",
       },
-      { text: "តើអ្នកមានបងស្រីអ្វី?", phonetic: "Bong Srei" },
-      { text: "តើអ្នកមានឈ្មោះអ្វី?", phonetic: "Chamous" },
+      {
+        text: "តើអ្នកមានបងស្រីអ្វី?",
+        phonetic: "Ter neak man bong paoun Bong Srei avey",
+      },
+      { text: "តើអ្នកមានឈ្មោះអ្វី?", phonetic: "Ter neak mean chamous avey" },
     ],
     answer: "តើអ្នកមានឈ្មោះអ្វី?",
   },
@@ -50,10 +53,13 @@ const blankWords = [
     translation: "ខ្ញុំមាន____ថា ទេវី។",
     phonetic: "Khnom mean _____ tha Devy",
     options: [
-      { text: "ខ្ញុំមានលោកថា ទេវី។", phonetic: "Lok" },
-      { text: "ខ្ញុំមានអ្នកថា ទេវី។", phonetic: "Neak" },
-      { text: "ខ្ញុំមានអាយុថា ទេវី។", phonetic: "Ah yuk" },
-      { text: "ខ្ញុំមានឈ្មោះថា ទេវី។", phonetic: "Chamous" },
+      { text: "ខ្ញុំមានលោកថា ទេវី។", phonetic: "Khnom mean lok tha Tevy" },
+      { text: "ខ្ញុំមានអ្នកថា ទេវី។", phonetic: "Khnom mean neak tha Tevy" },
+      { text: "ខ្ញុំមានអាយុថា ទេវី។", phonetic: "Khnom mean ah yuk tha Tevy" },
+      {
+        text: "ខ្ញុំមានឈ្មោះថា ទេវី។",
+        phonetic: "Khnom mean chamous tha Tevy",
+      },
     ],
     answer: "ខ្ញុំមានឈ្មោះថា ទេវី។",
   },
@@ -63,10 +69,13 @@ const blankWords = [
     translation: "_____ណាស់ដែរបានដឹង។",
     phonetic: "_____ nas dae ban deong",
     options: [
-      { text: "រីករាយណាស់ដែរបានដឹង។", phonetic: "Rik Reay" },
-      { text: "ស្អប់ណាស់ដែរបានដឹង។", phonetic: "Saorb" },
-      { text: "មិនចូលចិត្តណាស់ដែរបានដឹង។", phonetic: "Min Chol Chet" },
-      { text: "ស្រលាញ់ណាស់ដែរបានដឹង។", phonetic: "Srolanh" },
+      { text: "រីករាយណាស់ដែរបានដឹង។", phonetic: "Rik Reay nas dae ban deng" },
+      { text: "ស្អប់ណាស់ដែរបានដឹង។", phonetic: "Saorb nas dae ban deng" },
+      {
+        text: "មិនចូលចិត្តណាស់ដែរបានដឹង។",
+        phonetic: "Min Chol Chet nas dae ban deng",
+      },
+      { text: "ស្រលាញ់ណាស់ដែរបានដឹង។", phonetic: "Srolanh nas dae ban deng" },
     ],
     answer: "រីករាយណាស់ដែរបានដឹង។",
   },
@@ -76,10 +85,13 @@ const blankWords = [
     translation: "តើអ្នកមកពី_______ណា?",
     phonetic: "Ter neak mok pi ______ na",
     options: [
-      { text: "តើអ្នកមកពីកន្លែងណា?", phonetic: "Kon laeng" },
-      { text: "តើអ្នកមកពីស្អប់ណា?", phonetic: "Saorb" },
-      { text: "តើអ្នកមកពីប្រទេសណា?", phonetic: "Bro tes" },
-      { text: "តើអ្នកមកពីស្រលាញ់ណា?", phonetic: "Srolanh" },
+      {
+        text: "តើអ្នកមកពីកន្លែងណា?",
+        phonetic: "Ter neak mok pi kon laeng na?",
+      },
+      { text: "តើអ្នកមកពីស្អប់ណា?", phonetic: "Ter neak mok pi saorb na?" },
+      { text: "តើអ្នកមកពីប្រទេសណា?", phonetic: "Ter neak mok pi bro tes na?" },
+      { text: "តើអ្នកមកពីស្រលាញ់ណា?", phonetic: "Ter neak mok pi srolanh na" },
     ],
     answer: "តើអ្នកមកពីប្រទេសណា?",
   },
@@ -118,10 +130,10 @@ const Quiz = () => {
 
   if (currentQuestionIndex === -1) {
     return (
-      <div className="congratulations-1">
-        Congrats{" "}
-        <Link to="/lessons" className="each-unit">
-          <button className="button-8">Back to Lessons</button>
+      <div className="congratulations">
+        Congratulation!!
+        <Link to="/unit-1">
+          <button className="button-8">Back to Unit 1</button>
         </Link>
       </div>
     );
@@ -136,7 +148,6 @@ const Quiz = () => {
             <h3>{currentQuestion.prompt}</h3>
             {/* <h3>{currentQuestion.translation}</h3>
             <h3>{currentQuestion.phonetic}</h3> */}
-            <button>🔊</button>
           </div>
           <div className="blank-answers-choice">
             <div className="correct-answer-choice">
@@ -148,9 +159,9 @@ const Quiz = () => {
                     handleOptionClick(option.text);
                   }}
                 >
-                  {option.text}
-                  <br />
-                  {option.phonetic}
+                  <p style={{ fontSize: "18px" }}>{option.text}</p>
+                  {/* <br /> */}
+                  <p style={{ fontSize: "18px" }}>{option.phonetic}</p>
                 </button>
               ))}
             </div>

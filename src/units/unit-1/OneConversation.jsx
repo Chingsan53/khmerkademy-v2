@@ -28,7 +28,7 @@ const OneConversation = ({ user, lessonId }) => {
   const Navigate = useNavigate();
 
   const handleNext = () => {
-    Navigate("/lesson");
+    Navigate("/unit-1");
   };
   return (
     <div className="">

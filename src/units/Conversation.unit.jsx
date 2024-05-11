@@ -65,7 +65,7 @@ const Conversation = ({ data, handleNext, user }) => {
               Learn again
             </button>{" "}
             <button className="button-8" onClick={handleNext}>
-              Back to lesson
+              Back to Unit 1
             </button>
           </>
         ) : (
